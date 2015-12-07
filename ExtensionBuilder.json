@@ -1,0 +1,149 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    104,
+                    75
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": true,
+                    "_default4_delete": true,
+                    "customActions": []
+                },
+                "name": "Plz",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "936634903132"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "plz",
+                            "propertyType": "Integer",
+                            "uid": "1375557597223"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "ort",
+                            "propertyType": "String",
+                            "uid": "418864637278"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "strasse",
+                            "propertyType": "String",
+                            "uid": "735855438484"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "hausnr",
+                            "propertyType": "Integer",
+                            "uid": "563238074636"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "zusatz",
+                            "propertyType": "String",
+                            "uid": "896298030457"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Plz => list, show, new, create, edit, update, delete"
+                },
+                "description": "backend module om bestanden te importerne",
+                "key": "backend",
+                "mainModule": "web",
+                "name": "Backend",
+                "tabLabel": ""
+            }
+        ],
+        "description": "Name, \nVendor, \nkey",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 6.2.0-6.2.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "version": "0.0.1"
+        },
+        "extensionKey": "key",
+        "name": "Name",
+        "originalExtensionKey": "",
+        "persons": [
+            {
+                "company": "DGF",
+                "email": "grrrben@gmail.com",
+                "name": "G. Wieldraaijer",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Plz => list, show, new, create, edit, update, delete",
+                    "noncacheableActions": "Plz => list, show, new, create, edit, update, delete",
+                    "switchableActions": ""
+                },
+                "key": "pi1",
+                "name": "Plugin"
+            }
+        ],
+        "vendorName": "Vendor"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2015-12-03 04:04",
+        "extension_builder_version": "6.2",
+        "be_user": " (1)"
+    }
+}

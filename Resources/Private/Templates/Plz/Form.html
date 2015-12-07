@@ -1,0 +1,86 @@
+
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="main">
+<h1>Check</h1>
+
+<f:flashMessages renderMode="div" />
+
+
+	<form name="plugin" method="post">
+
+		<input type="text" name="plz" id="plugin_plz"  placeholder="Postleitzahl" value="{postPlz}">
+		<input type="text" name="strasse" id="plugin_strasse"  placeholder="Straße" value="{postStrasse}">
+		<input type="text" name="hausnr" id="plugin_hausnr"  placeholder="HsNr" value="{postNr}">
+
+		<input type="submit" value="check">
+
+	</form>
+
+
+    <f if condition="{plzs.count()}">
+
+        <ul>
+            <f:for each="{plzs}" as="plz">
+                <li>{plz.plz} {plz.ort} {plz.strasse} {plz.hausnr} {plz.zusatz}</li>
+            </f:for>
+
+        </ul>
+    </f>
+
+
+    {namespace h=Helhum\TyposcriptRendering\ViewHelpers}
+    <script>
+
+        var getFromUri = '<h:uri.ajaxAction controller="Plz" action="form" arguments="{competition:competition}" />';
+
+        var autoCompletePlz = []
+          , autoCompleteStrasse = []
+          , autoCompleteNr = [];
+
+        <f:for each="{acPlz}" as="item">
+        autoCompletePlz.push('{item.plz}');
+        </f:for>
+
+        <f:for each="{acStrasse}" as="item">
+                autoCompleteStrasse.push('{item}');
+        </f:for>
+
+        <f:for each="{acNr}" as="item">
+                autoCompleteNr.push('{item}');
+        </f:for>
+
+
+        $(document).ready(function () {
+
+            $("#plugin_plz").autocomplete({
+                source: autoCompletePlz
+            });
+
+            if (autoCompleteStrasse.length > 0) {
+                $("#plugin_strasse").autocomplete({
+                    source: autoCompleteStrasse
+                });
+            }
+
+            if (autoCompleteNr.length > 0) {
+                $("#plugin_hausnr").autocomplete({
+                    source: autoCompleteNr
+                });
+            }
+        });
+
+    </script>
+
+</f:section>

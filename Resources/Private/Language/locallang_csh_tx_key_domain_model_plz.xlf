@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-12-03T16:04:34Z" product-name="key">
+		<header/>
+		<body>
+			<trans-unit id="plz.description">
+				<source>plz</source>
+			</trans-unit>
+			<trans-unit id="ort.description">
+				<source>ort</source>
+			</trans-unit>
+			<trans-unit id="strasse.description">
+				<source>strasse</source>
+			</trans-unit>
+			<trans-unit id="hausnr.description">
+				<source>hausnr</source>
+			</trans-unit>
+			<trans-unit id="zusatz.description">
+				<source>zusatz</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
